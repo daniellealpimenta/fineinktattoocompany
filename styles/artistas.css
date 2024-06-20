@@ -1,0 +1,67 @@
+.intro_artista{
+    display: flex;
+    justify-content: center;
+    margin-top: 10vh;
+    margin-bottom: 15vh;
+}
+
+.intro_artista_foto{
+    display: flex;
+    flex-direction: column;
+}
+
+.intro_artista_img{
+    width: 500px;
+    height: 600px;
+    background-color: var(--cor-hover);
+}
+
+.intro_artista_icones{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 20%;
+    margin-top: 3vh;
+}
+
+.intro_artista_texto{
+    width: 36em;
+    margin-left: 10vh;
+}
+
+.intro_artista_nome{
+    color: var(--cor-texto);
+    font-size: 40px;
+    font-weight: 400;
+    letter-spacing: 0.3em;
+    border-bottom: 2px solid var(--cor-secundaria);
+    height: 10vh;
+    margin-bottom: 1vh;
+}
+
+.intro_artista_estilos{
+    color: var(--cor-texto);
+    font-size: 17px;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+}
+
+.intro_artista_paragrafo{
+    color: var(--cor-texto);
+    font-size: 18px;
+    letter-spacing: 0.1em;
+    text-align: justify;
+}
+
+.portfolio{
+    flex-direction: column;
+}
+
+.portfolio_titulo{
+    text-align: left;
+    width: 80%;
+}
+
+.tattoo_exemplos_titulo{
+    border: none;
+}

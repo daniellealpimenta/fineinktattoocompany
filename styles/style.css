@@ -1,0 +1,455 @@
+@import url('https://fonts.googleapis.com/css2?family=Inknut+Antiqua:wght@300;400;500;600;700;800;900&family=Julius+Sans+One&display=swap');
+@import url(estilos.css);
+@import url(artistas.css);
+
+
+:root{
+    --cor-principal: #222831;
+    --cor-secundaria: #76ABAE;
+    --cor-hover: #31363F ;
+    --cor-texto: #EEEEEE;
+    --cor-desenvolvedor: #B8B6B6;
+    --fonte-primaria: "Inknut Antiqua", serif;
+    --fonte-secundaria: "Julius Sans One", sans-serif;
+
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: var(--cor-principal);
+    height: 100vh;
+    font-family: var(--fonte-primaria);
+}
+
+main{
+    display: flex;
+    flex-direction: column;
+}
+
+a{
+ text-decoration: none;
+ color: black;
+}
+
+.cabecalho{
+    /* background-color: lightblue; */
+    padding: 1.5% 0% 0%;
+    display: flex;
+    justify-content: center;
+}
+
+.cabecalho_container{
+    display: flex;
+    flex: row;
+    width: 80%;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0px 2% 0.5% 2%;
+    margin-bottom: 0.7%;
+    border-bottom: 2px solid var(--cor-secundaria);
+    color: var(--cor-texto);
+}
+
+.menu{
+    /* background-color: lightblue; */
+    display: flex;
+    justify-content: center;
+}
+
+
+.menu_container{
+    display: flex;
+    flex: row;
+    width: 60%;
+    align-items: center;
+    justify-content: space-evenly;
+    margin-bottom: 10vh;
+}
+
+.menu a{
+    color: var(--cor-texto);
+}
+
+.home_img{
+    height: 45px;
+    cursor: pointer;
+}
+
+.titulo{
+    font-family: var(--fonte-secundaria);
+    font-size: 40px;
+    letter-spacing: 45px;
+    font-weight: 400;
+}
+
+.localizacao_img{
+    height: 45px;
+    cursor: pointer;
+}
+
+.estudio{
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+    height: 60vh;
+    margin-bottom: 35vh;
+}
+
+.video-bg_estudio {
+    display: flex;
+    width: 100%;
+    height: auto;
+    object-fit: cover; 
+    z-index: -1;
+    transition: opacity 0.8s ease;
+    /* border-top: 2px solid var(--cor-secundaria);
+    border-bottom: 2px solid var(--cor-secundaria); */
+}
+
+.estudio_titulo{
+    position: absolute;
+    font-size: 80px;
+    font-weight: 600;
+    letter-spacing: 0.4em;
+    color: var(--cor-texto);
+    cursor: default;
+}
+
+.intro{
+    display: flex;
+    justify-content: center;
+}
+
+.intro_container{
+    display: flex;
+    width: 50%;
+    align-items: center;
+    justify-content: center;
+}
+
+.intro_container_texto{
+    color: var(--cor-texto);
+    margin-left: 5vh;
+}
+
+.intro_container_paragrafo{
+    text-align: justify;
+    font-size: 18px;
+    letter-spacing: 1px;
+    font-weight: 300;
+    margin-bottom: 2vh;
+}
+
+.intro_container_link{
+    font-weight: 300;
+    color: var(--cor-texto);
+    font-size: 25px;
+    border: 2px solid var(--cor-secundaria);
+    border-radius: 16px;
+    padding: 0.1em 0.5em;
+    letter-spacing: 1px;
+}
+
+.intro_container_link:hover{
+    background-color: var(--cor-hover);
+}
+
+.promos {
+    text-align: center;
+    margin-top: 20vh;
+    margin-bottom: 20vh;
+}
+
+.promos_card_thalisson{
+    border: 2px solid var(--cor-secundaria);
+}
+
+.estilos{
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+    height: 60vh;
+    position: relative;
+    overflow: hidden;
+}
+
+.estilos:hover video {
+    opacity: 1;
+}
+
+.video-bg {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: auto;
+    height: auto;
+    min-width: 100%;
+    min-height: 100%;
+    object-fit: cover;
+    opacity: 0; 
+    z-index: -1;
+    transition: opacity 0.8s ease; 
+}
+
+.estilos_titulo{
+    font-weight: 400;
+    font-size: 40px;
+    letter-spacing: 0.4em;
+    color: var(--cor-texto);
+    cursor: default;
+}
+
+.tatuadores{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    color: var(--cor-texto);
+}
+
+.tatuadores_titulo{
+    width: 70%;
+    font-weight: 600;
+    letter-spacing: 0.4em;
+    font-size: 40px;
+    border: 0;
+}
+
+.tatuadores_container{
+    display: flex;
+    flex-flow: column;
+    margin-top: 10vh;
+    margin-bottom: 10vh;
+    width: 80%;
+}
+
+.tatuadores_fotos{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    border-top: 2px solid var(--cor-secundaria);
+    border-bottom: 2px solid var(--cor-secundaria);
+    height: 80vh;
+}
+
+.foto_thalisson{
+    width: 300px;
+    height: 400px;
+    background-color: var(--cor-hover);
+    display: flex;
+    align-items:flex-end;
+    justify-content: center;
+}
+
+.foto_joao{
+    width: 300px;
+    height: 400px;
+    background-color: var(--cor-hover);
+    display: flex;
+    align-items:flex-end;
+    justify-content: center;
+}
+
+.foto_lucas{
+    width: 300px;
+    height: 400px;
+    background-color: var(--cor-hover);
+    display: flex;
+    align-items:flex-end;
+    justify-content: center;
+}
+
+.tatuadores_nomes{
+    border: 2px solid var(--cor-secundaria);
+    background-color: var(--cor-principal);
+    color: var(--cor-texto);
+    border-radius: 25px;
+    padding: 0 10%;
+    margin-bottom: 10%;
+    font-weight: 300;
+    cursor: default;
+}
+
+.localizacao{
+    margin-bottom: 25vh;
+}
+
+.localizacao_container{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    margin: 0 10vh;
+    box-sizing: content-box;
+    cursor: default;
+}
+
+.localizacao_google{
+    border: 2px solid var(--cor-secundaria);
+    border-radius: 50px;
+    width: 35em; 
+    height: 26em;
+}
+
+.localizacao_texto{
+    color: var(--cor-texto);
+    width: 60vh;
+}
+
+.localizacao_titulo{
+    font-size: 20px;
+    font-weight: 600;
+    
+}
+
+.orcamento{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20vh;
+}
+
+.orcamento_titulo{
+    letter-spacing: 0.4em;
+    height: 10vh;
+    color: var(--cor-texto);
+    margin-bottom: 1vh;
+    font-weight: 600;
+    font-size: 60px;
+}
+
+.orcamento_subtitulo{
+    color: var(--cor-texto);
+    font-size: 30px;
+    font-weight: 400;
+    letter-spacing: 1px;
+    margin-bottom: 4vh;
+}
+
+.instagram{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 25vh;
+}
+
+.instagram_titulo{
+    letter-spacing: 0.4em;
+    height: 9vh;
+    color: var(--cor-texto);
+    border: 0;
+    text-align: center;
+    margin-bottom: 6vh;
+    font-weight: 600;
+    font-size: 50px;
+}
+
+.instagram_container{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 22%;
+}
+
+.instagram_link{
+    color: var(--cor-texto);
+    font-size: 25px;
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+
+.footer{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.footer_container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 2px solid var(--cor-secundaria);
+    padding: 5vh 0 5vh 0;
+    /* background-color: brown; */
+    width: 75%;
+}
+
+.footer_lista_titulo{
+    color: var(--cor-texto);
+    font-size: 20px;
+    letter-spacing: 1px;
+    font-weight: 500;
+}
+
+.footer_lista_container{
+    display: flex;
+    justify-content: space-between;
+    width: 50%;
+    /* background-color: blue; */
+    margin-right: 10vh;
+}
+
+.footer_lista{
+    display: flex;
+    flex-direction: column;
+    list-style-type: none;
+    /* background-color: purple; */
+}
+
+.footer_lista_item{
+    display: flex;
+    align-items: center;
+    width: 100%;
+    /* background-color: red; */
+    margin-bottom: 2vh;
+}
+
+.footer_item_texto{
+    color: var(--cor-texto);
+    font-size: 14px;
+    font-weight: 400;
+    letter-spacing: 1px;
+    margin-left: 1vh;
+}
+
+.footer_img{
+    margin-left: 10vh;
+}
+
+.footer_desenvolvedor{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 2vh;
+}
+
+.footer_desenvolvedor_sub{
+    font-size: 10px;
+    font-weight: 300;
+    color: var(--cor-desenvolvedor);
+}
+
+.footer_desenvolverdor_img{
+    display: flex;
+    justify-content: space-around;
+    width: 30%;
+}
